@@ -11,9 +11,8 @@ import Search from './Search.vue'
 export default {
     name: "HelloWorld",
     data() {
-        return {
-            
-        };
+      return {
+      };
     },
     components: { 
         Search

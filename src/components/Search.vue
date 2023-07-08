@@ -6,9 +6,9 @@
         <div v-if="data">
             <h2>{{ data.login }}</h2>
             <p>{{ data.name }}</p>
-            <img :src="data.avatar_url" :alt="data.login">
+            <a :href="data.html_url" target="_blank"><img :src="data.avatar_url" :alt="data.login"></a>
         </div>
-        <Repos v-if="data" :user="data.login"/>
+        <Repos v-if="data" :user="data.login" />
     </div>
 </template>
 
@@ -30,16 +30,18 @@ export default {
             await api.get(`/${this.user}`)
                 .then(res => {
                     this.data = res.data;
+                    console.log(res);
                     this.Iserro = false;
-            })
+                })
                 .catch(erro => {
-                if (erro.response.status === 404) {
-                    this.Iserro = true;
-                }
-            });
+                    if (erro.response.status === 404) {
+                        this.Iserro = true;
+                        this.data = null
+                    }
+                });
             this.user = "";
         },
-        repos(user){
+        repos(user) {
             this.user = user;
         }
     },

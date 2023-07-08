@@ -1,7 +1,8 @@
 <template>
     <div>
-        <h2>Repositorios de {{ user }}:</h2>
+        <h2>Reposijtorios de {{ user }}:</h2>
         <ul>
+            <li v-show="vazio">Sem repositórios</li>
             <li v-for="repo in repos">{{ repo.name }}</li>
         </ul>
     </div>
@@ -14,24 +15,39 @@ export default {
     name: 'Repositorios',
     data() {
         return {
-            repos: []
+            repos: [],
+            vazio: false
         }
     },
     props: {
         user: String,
         required: true,
     },
+    watch: {
+        user: {
+            handler() {
+              this.RepoUsers()
+            }
+        }
+    },
     methods: {
-        RepoUsers(){
-            api.get(`/${this.user}/repos`)
-            .then(res => {
-                console.log(res.data);
-                this.repos = res.data
-                
-            })
-            .catch(erro => {
-                console.log(erro);
-            })
+         RepoUsers() {
+            setTimeout(() => {
+                 api.get(`/${this.user}/repos`)
+                .then(res => {
+                    console.log(res.data);
+                    this.repos = res.data
+                    const repos = res.data
+                    if (repos.length === 0) {
+                        this.vazio = true
+                    } else {
+                        this.vazio = false
+                    }
+                })
+                .catch(erro => {
+                    console.log(erro);
+                })
+            }, 500)            
         }
     },
     mounted(){
