@@ -9,15 +9,24 @@
 import Search from './Search.vue'
 
 export default {
-    name: "HelloWorld",
-    data() {
-      return {
-      };
-    },
-    components: { 
-        Search
-    }
+  name: "HelloWorld",
+  data() {
+    return {
+    };
+  },
+  components: {
+    Search
+  }
 }
 </script>
 
-<style scoped></style>
+<style>
+h1 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+body{
+  background-color: rgb(110, 34, 133);
+}
+</style>

@@ -1,12 +1,16 @@
 <template>
     <div>
-        <input type="text" v-model="user" placeholder="Nome de um usuário">
-        <button @click="pesquisar">pesquisar</button>
-        <h1 v-show="Iserro">Usuário não encontrado!</h1>
-        <div v-if="data">
-            <h2>{{ data.login }}</h2>
-            <p>{{ data.name }}</p>
-            <a :href="data.html_url" target="_blank"><img :src="data.avatar_url" :alt="data.login"></a>
+        <div class="search">
+            <input type="text" v-model="user" placeholder="Nome de um usuário">
+            <button @click="pesquisar">pesquisar</button>
+            <h1 v-show="Iserro">Usuário não encontrado!</h1>
+        </div>
+        <div v-if="data" class="container">
+            <h2>{{ data.name }}</h2>
+            <p>{{ data.login }}</p>
+            <a :href="data.html_url" target="_blank">
+                <img :src="data.avatar_url" :alt="data.login" >
+            </a>
         </div>
         <Repos v-if="data" :user="data.login" />
     </div>
@@ -48,3 +52,34 @@ export default {
     components: { Repos }
 }
 </script>
+
+<style>
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .6rem;
+}
+
+.search input {
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+}
+
+.search button {
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container img, a {
+    border-radius: 50%;
+    width: 140px;
+}
+</style>

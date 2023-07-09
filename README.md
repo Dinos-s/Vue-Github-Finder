@@ -15,3 +15,6 @@ Próximo: estilizar os projeto, da vida e cores;
 
 # Vídeo do protótipo do projeto 
 ![..](./src/assets/protótipo.gif)
+
+## 9/7/2023 - dando estilo
+Hoje dei inicio a customização e estilização do projeto;
