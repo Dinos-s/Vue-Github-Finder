@@ -18,3 +18,6 @@ Próximo: estilizar os projeto, da vida e cores;
 
 ## 9/7/2023 - dando estilo
 Hoje dei inicio a customização e estilização do projeto;
+
+### Foto da nova versão
+![..](./src/assets/estilizando.png)
