@@ -21,3 +21,6 @@ Hoje dei inicio a customização e estilização do projeto;
 
 ### Foto da nova versão
 ![..](./src/assets/estilizando.png)
+
+## 10/7/2023 - tentativa de estilizar
+Estou sem ideias de estilização;
