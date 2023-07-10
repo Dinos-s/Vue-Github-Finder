@@ -3,8 +3,8 @@
         <div class="search">
             <input type="text" v-model="user" placeholder="Nome de um usuário">
             <button @click="pesquisar">pesquisar</button>
-            <h1 v-show="Iserro">Usuário não encontrado!</h1>
         </div>
+        <h1 v-show="Iserro">Usuário não encontrado!</h1>
         <div v-if="data" class="container">
             <h2>{{ data.name }}</h2>
             <p>{{ data.login }}</p>
