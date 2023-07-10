@@ -23,4 +23,5 @@ Hoje dei inicio a customização e estilização do projeto;
 ![..](./src/assets/estilizando.png)
 
 ## 10/7/2023 - tentativa de estilizar
-Estou sem ideias de estilização;
+Estou sem ideia de estilização;
+Apenas realizei a adição dos estilos na app.js;
