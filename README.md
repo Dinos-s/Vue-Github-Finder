@@ -25,3 +25,6 @@ Hoje dei inicio a customização e estilização do projeto;
 ## 10/7/2023 - tentativa de estilizar
 Estou sem ideia de estilização;
 Apenas realizei a adição dos estilos na app.js;
+
+## 12/07/23 - melhorando estilização
+Criei um pequena animção no hover para o perfil no github;

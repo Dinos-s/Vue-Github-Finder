@@ -22,6 +22,7 @@ export default {
 
 <style>
 h1 {
+  margin-top: 15px;
   text-align: center;
   color: rgb(255, 255, 255);
 }
