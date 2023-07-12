@@ -97,15 +97,17 @@ export default {
     margin-top: 14px; 
     display: flex;
     flex-direction: column;
+    background-color: rgba(243, 82, 243, 0.541);
+    
 }
 
 .container img {
-    border: solid 2px #55b4eb
+    border: solid 2px #55b4eb;
 }
 
 .container img:hover {
     transition: .1s;
-    border: solid 5px #0ee04d
+    border: solid 5px #0ee04d;
 }
 
 .container img,

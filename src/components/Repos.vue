@@ -3,7 +3,10 @@
         <h2>Reposijtorios de {{ user }}:</h2>
         <ul>
             <li v-show="vazio">Sem repositórios</li>
-            <li v-for="repo in repos">{{ repo.name }}</li>
+            <li v-for="repo in repos">
+                {{ repo.name }} <br><br>
+                {{ repo.description }}
+            </li>
         </ul>
     </div>
 </template>
@@ -57,7 +60,20 @@ export default {
 </script>
 
 <style>
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 li {
     list-style: none;
+    background: white;
+    border-radius: 10px;
+    margin: 12px 4px;
+    padding: 5px;
+    width: 410px;
+    height: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
 }
 </style>
