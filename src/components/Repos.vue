@@ -4,8 +4,10 @@
         <ul>
             <li v-show="vazio">Sem repositórios</li>
             <li v-for="repo in repos">
-                {{ repo.name }} <br><br>
-                {{ repo.description }}
+                <h4>{{ repo.name }}</h4>
+                <p>{{ repo.description }}</p> 
+                <p>{{ repo.language }}</p>
+                <a :href="repo.html_url">🔗{{ repo.html_url }}</a>
             </li>
         </ul>
     </div>
@@ -59,11 +61,16 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+h2{
+    color: #fff;
+}
+
 ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 li {
@@ -75,5 +82,20 @@ li {
     width: 410px;
     height: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
+}
+
+li h4 {
+    text-align: center;
+    margin-bottom: .4rem;
+}
+
+li p {
+    margin-bottom: 4px;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #7447bc;
 }
 </style>

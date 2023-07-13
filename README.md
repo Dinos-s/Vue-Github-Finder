@@ -28,3 +28,12 @@ Apenas realizei a adição dos estilos na app.js;
 
 ## 12/07/23 - melhorando estilização
 Criei um pequena animção no hover para o perfil no github;
+
+## 13/7/203 - estilizando os lis
+Coloquei os items de cada repositório em um tipo de card junto com:
+- nome do repositório;
+- sua descrição;
+- linguagem utilizada;
+- link para repositório no GitHub;
+
+![..](./src/assets/cards.png)
