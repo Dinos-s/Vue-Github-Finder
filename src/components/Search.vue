@@ -7,10 +7,11 @@
         <h1 v-show="Iserro" class="erro">Usuário não encontrado!</h1>
         <div v-if="data" class="container">
             <h2>{{ data.name }}</h2>
-            <p>{{ data.login }}</p>
+            <p> <strong>Nickname:</strong> {{ data.login }}</p>
             <a :href="data.html_url" target="_blank">
                 <img :src="data.avatar_url" :alt="data.login">
             </a>
+            <p class="bio">{{ data.bio }}</p>
         </div>
         <Repos v-if="data" :user="data.login" />
     </div>
@@ -94,11 +95,28 @@ export default {
 }
 
 .container {
-    margin-top: 14px; 
+    margin-top: 14px;
     display: flex;
     flex-direction: column;
     background-color: rgba(243, 82, 243, 0.541);
-    
+    align-items: center;
+}
+
+.container h2, p, a {
+    margin-left: 8px;
+}
+
+.container .bio{
+    font-size: 22px;
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 42px;
+}
+
+.container p {
+    font-size: 18px;
 }
 
 .container img {
@@ -110,8 +128,7 @@ export default {
     border: solid 5px #0ee04d;
 }
 
-.container img,
-a {
+.container img, a {
     border-radius: 50%;
     width: 140px;
 }

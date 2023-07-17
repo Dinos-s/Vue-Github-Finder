@@ -37,3 +37,9 @@ Coloquei os items de cada repositório em um tipo de card junto com:
 - link para repositório no GitHub;
 
 ![..](./src/assets/cards.png)
+
+## 17/7/2023 - talvez finalizado
+Enfim parece que conseguir finalizar esse projetionho incrvel eu realmente adorei😎👍
+
+![..](./src/assets/estiloEnd1.png)
+![..](./src/assets/estiloEnd2.png)

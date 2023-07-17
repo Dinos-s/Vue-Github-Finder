@@ -5,7 +5,7 @@
             <li v-show="vazio">Sem repositórios</li>
             <li v-for="repo in repos">
                 <h4>{{ repo.name }}</h4>
-                <p>{{ repo.description }}</p> 
+                <p>{{ repo.description }}</p>
                 <p>{{ repo.language }}</p>
                 <a :href="repo.html_url">🔗{{ repo.html_url }}</a>
             </li>
@@ -31,38 +31,42 @@ export default {
     watch: {
         user: {
             handler() {
-              this.RepoUsers()
+                this.RepoUsers()
             }
         }
     },
     methods: {
-         RepoUsers() {
+        RepoUsers() {
             setTimeout(() => {
-                 api.get(`/${this.user}/repos`)
-                .then(res => {
-                    console.log(res.data);
-                    this.repos = res.data
-                    const repos = res.data
-                    if (repos.length === 0) {
-                        this.vazio = true
-                    } else {
-                        this.vazio = false
-                    }
-                })
-                .catch(erro => {
-                    console.log(erro);
-                })
-            }, 500)            
+                api.get(`/${this.user}/repos`)
+                    .then(res => {
+                        console.log(res.data);
+                        this.repos = res.data
+                        const repos = res.data
+                        if (repos.length === 0) {
+                            this.vazio = true
+                        } else {
+                            this.vazio = false
+                        }
+                    })
+                    .catch(erro => {
+                        console.log(erro);
+                    })
+            }, 500)
         }
     },
-    mounted(){
+    mounted() {
         this.RepoUsers()
     }
 }
 </script>
 
 <style scoped>
-h2{
+
+h2 {
+    margin-top: .5rem;
+    margin-left: 24px;
+    font-size: 24px;
     color: #fff;
 }
 
@@ -84,6 +88,13 @@ li {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
 }
 
+li:hover {
+    background-color: rgb(32, 32, 32);
+    transition: 1s;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
 li h4 {
     text-align: center;
     margin-bottom: .4rem;
@@ -93,9 +104,10 @@ li p {
     margin-bottom: 4px;
 }
 
-a{
+a {
     text-decoration: none;
     cursor: pointer;
     color: #7447bc;
+    word-wrap: break-word;
 }
 </style>
