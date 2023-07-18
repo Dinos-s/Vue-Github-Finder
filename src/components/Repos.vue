@@ -7,7 +7,7 @@
                 <h4>{{ repo.name }}</h4>
                 <p>{{ repo.description }}</p>
                 <p>{{ repo.language }}</p>
-                <a :href="repo.html_url">🔗{{ repo.html_url }}</a>
+                <a :href="repo.html_url" target="_blank">🔗{{ repo.html_url }}</a>
             </li>
         </ul>
     </div>
