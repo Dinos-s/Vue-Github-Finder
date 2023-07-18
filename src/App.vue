@@ -1,13 +1,13 @@
 <template>
-  <HelloWorld />
+  <Finder />
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Finder from './components/Finder.vue'
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500&display=swap');
 
 * {
   font-family: 'Roboto', sans-serif;
